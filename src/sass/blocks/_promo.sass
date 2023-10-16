@@ -1,0 +1,29 @@
+.promo
+    min-height: 100vh
+    background: $background-color url(../img/selfie.png) no-repeat 140% 100%/70%
+    position: relative
+    padding: 206px
+    &__title
+        width: 60%
+        margin-top: 10px
+    &__subtitle
+        position: relative
+        @include before_circle
+        z-index: 2
+        padding-left: 10px
+    &__btn
+        display: flex
+        justify-content: space-between
+        width: 25%
+        margin-top: 25px
+    &__link
+        font-size: 14px
+        font-weight: 700
+        text-decoration: none
+        color: #000
+        &:hover
+            background-color: $main-color
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15)
+       
+            
+  
