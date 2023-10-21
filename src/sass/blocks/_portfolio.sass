@@ -1,15 +1,5 @@
 .portfolio
     padding-top: 120px
-    &__title
-        position: relative
-        text-align: center
-        @include before_circle
-        &::before
-            left:50%
-            transform: translateX(-50%)
-    &__subtitle
-        text-align: center
-        margin-top: 6px
     &__wrapper
         margin-top: 60px
         display: grid
@@ -24,7 +14,6 @@
             grid-column: 2/4
     &__item
         transition: all 0.5s
-        z-index: 100000000
         & img
             width: 100%
         &:hover

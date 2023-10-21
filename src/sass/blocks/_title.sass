@@ -18,3 +18,13 @@
         line-height: 30px
     &_white
         color: white
+.page__title
+    position: relative
+    text-align: center
+    @include before_circle
+    &::before
+        left:50%
+        transform: translateX(-50%)
+.page__subtitle
+    text-align: center
+    margin-top: 6px

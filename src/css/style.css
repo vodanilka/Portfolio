@@ -132,9 +132,42 @@ body {
   color: white;
 }
 
+.page__title {
+  position: relative;
+  text-align: center;
+}
+.page__title::before {
+  content: "";
+  width: 36px;
+  height: 36px;
+  background-color: #FFA501;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: -25%;
+}
+.page__title::before {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.page__subtitle {
+  text-align: center;
+  margin-top: 6px;
+}
+
 .btn {
   height: 45px;
   padding: 12px 26px;
+  background-color: #FFA501;
+}
+.btn:hover {
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .sidepanel {
@@ -249,7 +282,7 @@ body {
   background: rgba(0, 0, 0, 0);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  z-index: 0;
+  z-index: -1;
 }
 .menu__overlay__active {
   background: rgba(0, 0, 0, 0.8);
@@ -341,30 +374,6 @@ body {
 .benefit {
   padding-top: 120px;
 }
-.benefit__title {
-  position: relative;
-  text-align: center;
-}
-.benefit__title::before {
-  content: "";
-  width: 36px;
-  height: 36px;
-  background-color: #FFA501;
-  border-radius: 50%;
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  top: -25%;
-}
-.benefit__title::before {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.benefit__subtitle {
-  text-align: center;
-  margin-top: 6px;
-}
 .benefit__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 425px);
@@ -454,30 +463,6 @@ body {
 .skills {
   padding-top: 120px;
 }
-.skills__title {
-  position: relative;
-  text-align: center;
-}
-.skills__title::before {
-  content: "";
-  width: 36px;
-  height: 36px;
-  background-color: #FFA501;
-  border-radius: 50%;
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  top: -25%;
-}
-.skills__title::before {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.skills__subtitle {
-  margin-top: 6px;
-  text-align: center;
-}
 .skills__wrapper {
   padding: 60px 10px 0 10px;
   display: grid;
@@ -560,30 +545,6 @@ body {
 .portfolio {
   padding-top: 120px;
 }
-.portfolio__title {
-  position: relative;
-  text-align: center;
-}
-.portfolio__title::before {
-  content: "";
-  width: 36px;
-  height: 36px;
-  background-color: #FFA501;
-  border-radius: 50%;
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  top: -25%;
-}
-.portfolio__title::before {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.portfolio__subtitle {
-  text-align: center;
-  margin-top: 6px;
-}
 .portfolio__wrapper {
   margin-top: 60px;
   display: grid;
@@ -602,7 +563,6 @@ body {
 .portfolio__item {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  z-index: 100000000;
 }
 .portfolio__item img {
   width: 100%;
@@ -610,4 +570,88 @@ body {
 .portfolio__item:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+.contact {
+  padding: 120px 0 90px 0;
+}
+.contact__wrapper {
+  padding: 0 35px 0 50px;
+  display: grid;
+  grid-template-columns: 400px 585px;
+  gap: 0 68px;
+}
+.contact__photo img {
+  width: 100%;
+}
+.contact .page__title {
+  text-align: left;
+  padding-left: 10px;
+}
+.contact .page__title::before {
+  left: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.contact .page__subtitle {
+  text-align: left;
+}
+.contact .divider {
+  margin: 0;
+}
+.contact p, .contact__social {
+  margin-top: 20px;
+}
+.contact__link {
+  margin-right: 25px;
+  text-decoration: none;
+}
+.contact__link img {
+  width: 30px;
+  height: 30px;
+}
+.contact__form {
+  position: relative;
+  margin-top: 30px;
+  display: grid;
+  grid-template: 45px 190px 45px/repeat(2, 280px);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  row-gap: 29px;
+}
+.contact__form label {
+  position: absolute;
+  font-size: 12px;
+  display: block;
+  background-color: #fff;
+  top: -9px;
+  left: 12px;
+}
+.contact__input {
+  position: relative;
+}
+.contact__input input {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.contact__textarea {
+  grid-column: 1/3;
+  position: relative;
+}
+.contact__textarea textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.contact__btn {
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
 }
